@@ -1,0 +1,26 @@
+img{
+	flex-direction: row;
+	height: 100px;
+	width: 100px;
+	}
+.description{
+	width: 120px;
+	height: 150px;
+	text-align: center;
+	margin:10px;
+	background-color: #fff;
+}
+.container-fluid{
+	display: flex;
+	justify-content: flex-start;
+}
+.opponent{
+	padding-left:20px;
+}
+#opponents{
+	display: flex;
+	justify-content: flex-start;
+}
+body{
+	background-image: url(../images/starwars.jpeg);
+}
