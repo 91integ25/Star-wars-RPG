@@ -9,6 +9,7 @@ img{
 	text-align: center;
 	margin:10px;
 	background-color: #fff;
+	color:#000;
 }
 .container-fluid{
 	display: flex;
@@ -23,4 +24,8 @@ img{
 }
 body{
 	background-image: url(../images/starwars.jpeg);
+	color:#fff;
+}
+button{
+	color:#000;
 }

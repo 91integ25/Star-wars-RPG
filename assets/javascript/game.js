@@ -1,59 +1,60 @@
-var obi = 120,
-	darthSidious = 180,
-	darthMaul = 150,
-	luke = 100;
+var starwars ={ 
+	obi:120,
+	darthSidious: 180,
+	darthMaul: 150,
+	luke: 100
+}
+var obi = {
+	name:'obi',
+	attack:0,
+	HP:120
+}
+var DarthM = {
+	name:'obi',
+	attack:25,
+	HP:180
+}
+var darthS = {
+	name:'obi',
+	attack:20,
+	HP:150
+}
+var luke = {
+	name:'obi',
+	attack:5,
+	HP:100
+}
+	
 	
 $(document).ready(function () {
-
-	function choosePlayer() {
+var lean = true
+$('.description').on('click', function(){
+	if(lean){
+		lean = false;
+		var fighters = $('.description');
+		console.log($(this));
+		$('#opponents').append(fighters);
+		$('.position').append($(this));
 		
-	
-	$("#fighter1").on("click", function () {
-		$("#opponents").append($("#content2, #content3, #content4"));
-		$("#content4, #content3, #content2").css("background-color", "red");
-	})
+	}
+	else if($('#currentOpp').is(':parent')){
+		console.log('attack fighter');
+	}
+	else{
+		$('#currentOpp').append($(this));
+	}
 
-	$("#fighter2").on("click", function () {
-		$("#opponents").append($("#content1, #content3, #content4"));
-		$("#content4, #content3, #content1").css("background-color", "red");
-	})
+});
 
-	$("#fighter3").on("click", function () {
-		$("#opponents").append($("#content2, #content1, #content4"));
-		$("#content4, #content1, #content2").css("background-color", "red");
-	})
-
-	$("#fighter4").on("click", function () {
-		$("#opponents").append($("#content2, #content3, #content1"));
-		$("#content1, #content3, #content2").css("background-color", "red");
-
-	})
-}
-
-choosePlayer();
-
-function chooseOpponent() {
-	$("#fighter1").on("click", function () {
-		$("#currentFighter").append($("#content2, #content3, #content4"));
-		$("#content4, #content3, #content2").css("background-color", "red");
-	})
-
-	$("#fighter2").on("click", function () {
-		$("#currentFighter").append($("#content1, #content3, #content4"));
-		$("#content4, #content3, #content1").css("background-color", "red");
-	})
-
-	$("#fighter3").on("click", function () {
-		$("#currentFighter").append($("#content2, #content1, #content4"));
-		$("#content4, #content1, #content2").css("background-color", "red");
-	})
-
-	$("#fighter4").on("click", function () {
-		$("#currentFighter").append($("#content2, #content3, #content1"));
-		$("#content1, #content3, #content2").css("background-color", "red");
-	})
-}
+$('.attack').on('click', function() {
+ 	if($('#currentOpp').is(':empty')){
+ 		console.log('chooseOpp');
+ 	}
+ 	else{
+ 			console.log($('.description'));
+ 			console.log($('#currentOpp'));
+ 	}
+});
 
 
-
-})
+});
